@@ -3,6 +3,7 @@ import { MonthRange } from "./components/month-picker-content";
 import { MonthPicker } from "./components/month-picker";
 import { buttonVariants } from "./components/ui/button";
 import { GithubIcon } from "lucide-react";
+import { cn } from "./lib/utils";
 
 export function App() {
   const [range, setRange] = useState<MonthRange | null>(null);
@@ -25,10 +26,12 @@ export function App() {
           <a
             href="https://ui.shadcn.com/"
             target="_blank"
-            className={buttonVariants({
-              variant: "link",
-              className: "px-0 py-0",
-            })}
+            className={cn(
+              buttonVariants({
+                variant: "link",
+              }),
+              "px-0 py-0"
+            )}
           >
             Shadcnui
           </a>
@@ -62,10 +65,12 @@ export function App() {
           <a
             href="https://www.linkedin.com/in/hery-nirintsoa-0813b91a4/"
             target="_blank"
-            className={buttonVariants({
-              variant: "link",
-              className: "px-0 py-0",
-            })}
+            className={cn(
+              buttonVariants({
+                variant: "link",
+              }),
+              "px-0 py-0"
+            )}
           >
             Hery Nirintsoa
           </a>
