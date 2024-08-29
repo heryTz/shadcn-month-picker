@@ -21,7 +21,7 @@ export function App() {
           </a>
         </div>
         <p className="text-muted-foreground">
-          Sample month pick build on top of{" "}
+          Sample month picker build on top of{" "}
           <a
             href="https://ui.shadcn.com/"
             target="_blank"
