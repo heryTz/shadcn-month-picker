@@ -12,7 +12,7 @@ export function App() {
     <div className="max-w-screen-sm mx-auto p-4 flex flex-col h-dvh">
       <div className="flex-grow">
         <div className="flex items-center justify-between mb-3">
-          <h1 className="text-3xl font-bold">Month Picker</h1>
+          <h1 className="text-3xl font-bold">Shadcn Month Picker</h1>
           <a
             href="https://github.com/heryTz/shadcn-month-picker"
             className={buttonVariants({ size: "icon", variant: "outline" })}
