@@ -29,7 +29,14 @@ export function MonthPickerContent<Type extends "range" | "simple">({
     if (!value || reset) {
       onChange({ from: month.startOf("month").toDate() });
     } else if (value.from && !value.to) {
-      onChange({ ...value, to: month.endOf("month").toDate() });
+      if (dayjs(value.from).isBefore(month)) {
+        onChange({ ...value, to: month.endOf("month").toDate() });
+      } else {
+        onChange({
+          from: month.startOf("month").toDate(),
+          to: dayjs(value.from).endOf("month").toDate(),
+        });
+      }
     } else if (!value.from && value.to) {
       throw new Error(
         `This should never be happened. "value.to" should set after "value.from"`
