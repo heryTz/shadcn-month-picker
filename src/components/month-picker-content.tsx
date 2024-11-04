@@ -81,6 +81,8 @@ export function MonthPickerContent<Type extends "range" | "simple">({
 
             if (type === "simple") {
               isSelected = value ? dayjs(value).isSame(month) : false;
+              // It's disgusting XD
+              isFirst = isSelected;
             } else {
               if (value?.from && value.to) {
                 isSelected =
